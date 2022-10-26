@@ -10,7 +10,7 @@ module.exports = async function (deployer, network, accounts) {
     deployer.deploy(Users);
     deployer.link(Types, Products);
     deployer.deploy(Products);
-    deployer.deploy(SupplyChain, "Suresh", "suresh@geekyants.com");
+    deployer.deploy(SupplyChain, "Ace", "nexus864@tuta.io");
   } else {
     // For live & test networks it comes here
     deployer.deploy(Types);
@@ -18,6 +18,6 @@ module.exports = async function (deployer, network, accounts) {
     deployer.deploy(Users);
     deployer.link(Types, Products);
     deployer.deploy(Products);
-    deployer.deploy(SupplyChain, "Suresh", "suresh@geekyants.com");
+    deployer.deploy(SupplyChain, "Ace", "nexus864@tuta.io");
   }
 };

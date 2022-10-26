@@ -11,7 +11,7 @@ module.exports = {
       provider: () =>
         new HDWalletProvider({
           privateKeys: [mnemonic],
-          providerOrUrl: "https://rinkeby.infura.io/v3/INFURA_PROJECT_ID",
+          providerOrUrl: "https://goerli.infura.io/v3/61036e6cd51b45a29cfd609bdf5836f3",
           numberOfAddresses: 1,
         }),
       network_id: 4,
