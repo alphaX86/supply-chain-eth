@@ -5,12 +5,6 @@ pragma solidity >=0.4.25 <0.9.0;
 import "./Products.sol";
 import "./Users.sol";
 
-/**
- * @title SupplyChain
- * @author Suresh Konakanchi | GeekyAnts
- * @dev Implements the transparency in the supply chain to
- * understand the actual user & the flow of the products/medicines
- */
 contract SupplyChain is Users, Products {
     /**
      * @dev Create a new SupplyChain with the provided 'manufacturer'

@@ -24,14 +24,14 @@ export const HomePage = () => {
               fontSize={["xl", "2xl"]}
               fontWeight="light">
               We’re in relentless pursuit of scientific breakthroughs and
-              revolutionary medicines that will create a healthier world for
+              revolutionary vaccines that will create a healthier world for
               everyone.
             </Text>
           </Box>
           <button
             onClick={() => navigate("/all-products")}
             className="explore-button">
-            Explore our Products
+            Explore Products
           </button>
         </Center>
         <Footer />

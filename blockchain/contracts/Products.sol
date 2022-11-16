@@ -4,11 +4,7 @@ pragma solidity >=0.4.25 <0.9.0;
 
 import "./Types.sol";
 
-/**
- * @title Products
- * @author Suresh Konakanchi | GeekyAnts
- * @dev Library for managing products
- */
+
 contract Products {
     Types.Product[] internal products;
     mapping(string => Types.Product) internal product;
@@ -23,7 +19,8 @@ contract Products {
         string scientificName,
         string barcodeId,
         uint256 manDateEpoch,
-        uint256 expDateEpoch
+        uint256 expDateEpoch,
+        string location
     );
     event ProductOwnershipTransfer(
         string name,
@@ -31,7 +28,8 @@ contract Products {
         string scientificName,
         string barcodeId,
         string buyerName,
-        string buyerEmail
+        string buyerEmail,
+        string location
     );
 
     // Contract Methods
@@ -89,7 +87,8 @@ contract Products {
             product_.scientificName,
             product_.barcodeId,
             product_.manDateEpoch,
-            product_.expDateEpoch
+            product_.expDateEpoch,
+            product_.location
         );
     }
 
@@ -130,6 +129,7 @@ contract Products {
             product_.manufacturerName,
             product_.scientificName,
             product_.barcodeId,
+            product_.location,
             party_.name,
             party_.email
         );

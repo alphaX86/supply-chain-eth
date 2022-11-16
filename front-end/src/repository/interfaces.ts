@@ -14,6 +14,7 @@ export interface Product {
   productType: ProductType | string;
   scientificName: string;
   usage: string;
+  location: string;
   composition: string[];
   sideEffects: string[];
   productHistory?: ProductHistory;

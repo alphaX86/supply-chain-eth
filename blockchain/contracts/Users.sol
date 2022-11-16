@@ -4,11 +4,6 @@ pragma solidity >=0.4.25 <0.9.0;
 
 import "./Types.sol";
 
-/**
- * @title Users
- * @author Suresh Konakanchi | GeekyAnts
- * @dev Library for managing addresses assigned to a particular user with a particular role.
- */
 contract Users {
     mapping(address => Types.UserDetails) internal users;
     mapping(address => Types.UserDetails[]) internal manufacturerSuppliersList;

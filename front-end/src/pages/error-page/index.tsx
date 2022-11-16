@@ -19,7 +19,7 @@ export function ErrorPage() {
           Page Not Found
         </Heading>
         <Text fontSize="2xl" fontWeight="normal">
-          Please check the url in the address bar and try again
+          Please check the URL in the address bar and try again
         </Text>
         <Link to="/">
           <Button my="2" alignSelf="center">

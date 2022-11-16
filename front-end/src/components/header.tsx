@@ -37,10 +37,10 @@ export function Header() {
         <HStack space={3} alignItems="center">
           <Pressable onPress={() => navigate("/")}>
             <Image
-              size={{ base: "90", md: "130" }}
+              size={{ base: "90", md: "100" }}
               resizeMode={"contain"}
               source={{
-                uri: "https://www.pmlive.com/__data/assets/image/0006/1360914/Pfizer_new_2021.jpeg",
+                uri: "https://cdn.logojoy.com/wp-content/uploads/2018/05/30162403/12_big.png",
               }}
               alt="Logo"
             />

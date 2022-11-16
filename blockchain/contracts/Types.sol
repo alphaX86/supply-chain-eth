@@ -2,11 +2,6 @@
 pragma experimental ABIEncoderV2;
 pragma solidity >=0.4.25 <0.9.0;
 
-/**
- * @title Types
- * @author Suresh Konakanchi
- * @dev All the custom types that we have used in Supply Chain
- */
 library Types {
     enum UserRole {
         Manufacturer, // 0
@@ -52,6 +47,7 @@ library Types {
         uint256 batchCount; // QTY that were packed in single batch
         string barcodeId;
         string productImage;
+        string location;
         ProductType productType;
         string scientificName;
         string usage;

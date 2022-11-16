@@ -37,7 +37,7 @@ export class SupplyChainService {
       });
       await ethereum.request({
         method: "wallet_switchEthereumChain",
-        params: [{ chainId: `0x${Number(4).toString(16)}` }],
+        params: [{ chainId: `0x${Number(5).toString(16)}` }],
       });
       this._accountAdress = accounts[0];
       this._supplyChainContract = this.getContract();
