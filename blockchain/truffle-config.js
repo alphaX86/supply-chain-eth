@@ -1,5 +1,5 @@
 var HDWalletProvider = require("@truffle/hdwallet-provider");
-const mnemonic = "WALLET_PRIVATE_KEY";
+const mnemonic = "0x254819bd5887f5ca78053302fc51ec556b84f4e8a71f65d915fe6c73c60b653a";
 
 module.exports = {
   plugins: ["truffle-security"],
@@ -7,15 +7,15 @@ module.exports = {
   contracts_build_directory: "./build",
   migrations_directory: "./migrations",
   networks: {
-    rinkeby: {
+    test1: {
       provider: () =>
         new HDWalletProvider({
           privateKeys: [mnemonic],
-          providerOrUrl: "https://goerli.infura.io/v3/61036e6cd51b45a29cfd609bdf5836f3",
+          providerOrUrl: "https://eth-goerli.g.alchemy.com/v2/wcgTff7edMioNR2amK4y-vfZUsmBsl6a",
           numberOfAddresses: 1,
         }),
-      network_id: 4,
-      gas: 10000000, // Max is 10000000
+      network_id: 5,
+      gas: 30000000, // Max is 10000000
       confirmations: 4,
       timeoutBlocks: 200,
       skipDryRun: true,
@@ -23,14 +23,17 @@ module.exports = {
       // maxFeePerGas: 10,
       // maxPriorityFeePerGas: 10,
     },
-    development: {
-      host: "127.0.0.1",
-      port: 7545,
+    dev: {
+      provider: () => new HDWalletProvider({
+        privateKeys: [mnemonic],
+        providerOrUrl: "http://127.0.0.1:8545/",
+        numberOfAddresses: 1,
+      }),
       network_id: "*", // Match any network id
-      gas: 10000000, // Use `gas` & `gasPrice` only if creating type 0 transactions
+      //gas: 30000000, // Use `gas` & `gasPrice` only if creating type 0 transactions
       gasPrice: 20000000000, // (20 Gwei) All gas values specified in wei
-      maxFeePerGas: 10, // Use only if creating type 2 transactions
-      maxPriorityFeePerGas: 10, // Use only if creating type 2 transactions
+      //maxFeePerGas: 10, // Use only if creating type 2 transactions
+      //maxPriorityFeePerGas: 10, // Use only if creating type 2 transactions
       // from: "", // From which we account we have to deploy
       // websockets: true,
       // skipDryRun: false,

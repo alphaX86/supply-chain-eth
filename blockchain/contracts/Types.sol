@@ -47,7 +47,6 @@ library Types {
         uint256 batchCount; // QTY that were packed in single batch
         string barcodeId;
         string productImage;
-        string location;
         ProductType productType;
         string scientificName;
         string usage;

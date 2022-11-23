@@ -19,8 +19,7 @@ contract Products {
         string scientificName,
         string barcodeId,
         uint256 manDateEpoch,
-        uint256 expDateEpoch,
-        string location
+        uint256 expDateEpoch
     );
     event ProductOwnershipTransfer(
         string name,
@@ -28,8 +27,7 @@ contract Products {
         string scientificName,
         string barcodeId,
         string buyerName,
-        string buyerEmail,
-        string location
+        string buyerEmail
     );
 
     // Contract Methods
@@ -87,8 +85,7 @@ contract Products {
             product_.scientificName,
             product_.barcodeId,
             product_.manDateEpoch,
-            product_.expDateEpoch,
-            product_.location
+            product_.expDateEpoch
         );
     }
 
@@ -129,7 +126,6 @@ contract Products {
             product_.manufacturerName,
             product_.scientificName,
             product_.barcodeId,
-            product_.location,
             party_.name,
             party_.email
         );
